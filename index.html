@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest in Louisiana | SB 237 Child Welfare System Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#005236',
+                            mint: '#6bc4a6',
+                            orange: '#ff992b',
+                            urgent: '#bb4f07',
+                            charcoal: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --brand-primary: #005236;
+            --brand-secondary: #6bc4a6;
+            --risk-high: #bb4f07;
+            --risk-med: #ff992b;
+            --risk-low: #005236;
+            --bg-light: #fcfdfc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: #1a1a1a;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #005236 0%, #1a1a1a 100%);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f8faf9;
+            text-align: left;
+            padding: 14px 16px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #475569;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        td {
+            padding: 18px 16px;
+            border-top: 1px solid #f1f5f9;
+            vertical-align: top;
+            font-size: 0.875rem;
+        }
+
+        .impact-card {
+            border-left-width: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-med { border-left-color: var(--brand-orange); }
+        .impact-high { border-left-color: var(--brand-urgent); }
+
+        @media (max-width: 768px) {
+            .hero-content { flex-direction: column; }
+            .hero-stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <nav class="bg-white border-b border-slate-200 py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="https://tia-fields.github.io/la-sb441-early-childhood-oversight-analysis/IIL-Logo-Secondary-FullColor.svg" alt="Invest in Louisiana" class="h-10">
+                <div class="h-6 w-px bg-slate-200 hidden md:block"></div>
+                <span class="text-slate-600 font-semibold text-sm hidden md:block">SB 237 Child Welfare Oversight Tracker</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Policy Position</span>
+                <span class="bg-brand-orange/10 text-brand-urgent text-xs font-bold px-4 py-1.5 rounded-full border border-brand-orange/20 shadow-sm">
+                    Leaning Support with Amendments
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white pt-20 pb-28 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="inline-block px-3 py-1 bg-brand-mint/20 border border-brand-mint/30 rounded text-brand-mint text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                    Child Welfare Systems Analysis
+                </span>
+                <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">
+                    SB 237 <br><span class="text-brand-mint">Child Welfare</span> <br>System Dashboard
+                </h1>
+                <p class="text-lg text-slate-200 mb-10 leading-relaxed font-light">
+                    SB 237 restructures Louisiana’s child welfare reporting, investigation, and oversight framework by expanding mandatory reporting, strengthening interagency coordination, creating new school employee reporting infrastructure, and increasing fatality and near-fatality transparency. The bill responds to real child safety failures, but its success depends on whether Louisiana pairs faster reporting with staffing capacity, privacy safeguards, and family preservation supports.
+                </p>
+                <div class="flex flex-wrap gap-8 items-center border-t border-white/10 pt-8">
+                    <div>
+                        <p class="text-[10px] uppercase text-brand-mint font-black tracking-widest mb-1">Prepared By</p>
+                        <p class="font-bold text-lg">Tia Fields</p>
+                        <p class="text-sm text-slate-300">Safety Net Policy Analyst</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase text-brand-mint font-black tracking-widest mb-1">Inquiries</p>
+                        <a href="mailto:Tia@investlouisiana.org" class="text-sm text-white hover:text-brand-mint transition-colors font-medium underline underline-offset-4 decoration-brand-mint/50">Tia@investlouisiana.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 hero-stats">
+                <!-- Card 1 -->
+                <div class="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] font-black uppercase text-brand-mint tracking-[0.2em]">First-Year Fiscal Impact</span>
+                        <span class="bg-brand-urgent text-white text-[10px] font-black px-3 py-1 rounded tracking-tighter uppercase">Major Implementation Cost</span>
+                    </div>
+                    <div class="text-5xl font-black mb-3 tracking-tighter">$89.8M</div>
+                    <p class="text-sm text-slate-300 leading-relaxed">Estimated FY 2026-27 DCFS implementation cost for staffing, vehicles, operations, and system changes.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-black tracking-widest text-brand-mint/70">Source: Fiscal Note</span>
+                        <i data-lucide="trending-up" class="w-5 h-5 text-brand-mint"></i>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] font-black uppercase text-brand-mint tracking-[0.2em]">Workforce Requirement</span>
+                    </div>
+                    <div class="text-5xl font-black mb-3 tracking-tighter">688</div>
+                    <p class="text-sm text-slate-300 leading-relaxed">New DCFS positions projected as necessary to implement expanded intake, investigation, and response duties.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[10px] uppercase font-black tracking-widest text-brand-mint/70">Source: Fiscal Note</span>
+                        <i data-lucide="users-round" class="w-5 h-5 text-brand-mint"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Risk Strip -->
+    <div class="max-w-7xl mx-auto px-6 -mt-12">
+        <div class="bg-white rounded-2xl shadow-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 border border-slate-100">
+            <div class="text-center p-3 border-r border-slate-100">
+                <p class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-2">Child Safety Intent</p>
+                <div class="flex items-center justify-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-brand-dark"></div>
+                    <p class="text-sm font-black text-brand-dark">Strong</p>
+                </div>
+            </div>
+            <div class="text-center p-3 border-r border-slate-100">
+                <p class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-2">Implementation Risk</p>
+                <div class="flex items-center justify-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-brand-urgent"></div>
+                    <p class="text-sm font-black text-brand-urgent">High</p>
+                </div>
+            </div>
+            <div class="text-center p-3 border-r border-slate-100">
+                <p class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-2">Workforce Capacity</p>
+                <div class="flex items-center justify-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-brand-urgent animate-pulse"></div>
+                    <p class="text-sm font-black text-brand-urgent">High Risk</p>
+                </div>
+            </div>
+            <div class="text-center p-3">
+                <p class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-2">Data Governance</p>
+                <div class="flex items-center justify-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-brand-orange"></div>
+                    <p class="text-sm font-black text-brand-orange uppercase">Needs Guardrails</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-24">
+
+        <!-- Risk Snapshot / Metrics -->
+        <section>
+            <div class="flex flex-col lg:flex-row gap-16 mb-16">
+                <div class="lg:w-1/3">
+                    <h2 class="text-3xl font-black text-brand-dark mb-6 tracking-tight">The dashboard version of the bill</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        SB 237 attempts to close gaps in child protection by expanding reporting, requiring faster investigation, improving fatality and near-fatality transparency, and formalizing coordination between DCFS, schools, child advocacy centers, law enforcement, and the State Child Ombudsman. 
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-semibold border-l-4 border-brand-mint pl-6 italic">
+                        "A child welfare system cannot protect children through mandates alone if the workforce, technology, and community supports are not built to carry the load."
+                    </p>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-mint/50 transition-colors group">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">First-Year Cost</p>
+                        <div class="text-4xl font-black text-brand-dark group-hover:text-brand-charcoal transition-colors">$89.8M</div>
+                        <p class="text-xs text-slate-500 mt-3 italic leading-relaxed">DCFS projected implementation cost in FY 2026-27.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest">Fiscal Note</span>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-mint/50 transition-colors group">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Five-Year Cost</p>
+                        <div class="text-4xl font-black text-brand-dark group-hover:text-brand-charcoal transition-colors">$415.7M</div>
+                        <p class="text-xs text-slate-500 mt-3 italic leading-relaxed">Projected DCFS five-year expenditure increase.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest">Fiscal Note</span>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-mint/50 transition-colors group">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">New Positions</p>
+                        <div class="text-4xl font-black text-brand-dark group-hover:text-brand-charcoal transition-colors">688</div>
+                        <p class="text-xs text-slate-500 mt-3 italic leading-relaxed">New DCFS positions projected for implementation.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest">Fiscal Note</span>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-mint/50 transition-colors group">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">LDOE Database Cost</p>
+                        <div class="text-4xl font-black text-brand-dark group-hover:text-brand-charcoal transition-colors">$274K</div>
+                        <p class="text-xs text-slate-500 mt-3 italic leading-relaxed">First-year cost for school employee allegation tracking infrastructure.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest">Fiscal Note</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Architecture Table -->
+        <section>
+            <div class="mb-10">
+                <h2 class="text-3xl font-black text-brand-dark mb-3 tracking-tight">What SB 237 changes</h2>
+                <p class="text-slate-600 font-medium">Policy architecture shift across four critical lanes of the child welfare system.</p>
+            </div>
+            <div class="table-container shadow-xl bg-white border-0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>System Area</th>
+                            <th>Current Approach</th>
+                            <th>SB 237 Shift</th>
+                            <th>Strategic Concern</th>
+                            <th>Amendment Need</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-black text-brand-dark">Reporting</td>
+                            <td class="text-slate-500">Reports flow through disparate pathways depending on alleged perpetrator</td>
+                            <td class="bg-brand-mint/5 font-medium text-brand-dark">Centralizes reporting through DCFS; adds school reporting to LDOE</td>
+                            <td class="text-slate-600">Higher intake volume may bury urgent cases if triage is weak</td>
+                            <td class="text-brand-dark italic font-bold">Preserve professional triage and define pathways clearly</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black text-brand-dark">School Allegations</td>
+                            <td class="text-slate-500">Schools/LE handle allegations through existing local procedures</td>
+                            <td class="bg-brand-mint/5 font-medium text-brand-dark">Principals report to LDOE; state maintains tracking database</td>
+                            <td class="text-slate-600">Risk of unresolved allegations affecting future employment</td>
+                            <td class="text-brand-dark italic font-bold">Require due process, correction rights, and expungement rules</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black text-brand-dark">Investigations</td>
+                            <td class="text-slate-500">High and intermediate risk cases are investigated promptly</td>
+                            <td class="bg-brand-mint/5 font-medium text-brand-dark">High and intermediate risk cases must be investigated immediately</td>
+                            <td class="text-slate-600">Speed without staffing can create shallow investigations</td>
+                            <td class="text-brand-dark italic font-bold">Tie timelines to staffing and workload thresholds</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black text-brand-dark">Ombudsman Access</td>
+                            <td class="text-slate-500">Records available through authorized requests/discovery processes</td>
+                            <td class="bg-brand-mint/5 font-medium text-brand-dark">Expanded remote, real-time access to DCFS systems</td>
+                            <td class="text-slate-600">Privacy and federal compliance risk if access is too broad</td>
+                            <td class="text-brand-dark italic font-bold">Require audited, role-based, read-only access</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black text-brand-dark">Transparency</td>
+                            <td class="text-slate-500">Limited and reactive public reporting requirements</td>
+                            <td class="bg-brand-mint/5 font-medium text-brand-dark">Public website for fatality/near-fatality incident reviews</td>
+                            <td class="text-slate-600">Transparency is valuable but must protect family privacy</td>
+                            <td class="text-brand-dark italic font-bold">Establish privacy standards and trauma-informed rules</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- System Shift Section -->
+        <section class="bg-brand-charcoal text-white rounded-[2rem] p-12 lg:p-20 overflow-hidden relative shadow-2xl">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-dark/20 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-mint/10 rounded-full blur-[100px] -ml-48 -mb-48"></div>
+            
+            <h2 class="text-3xl font-black mb-12 tracking-tight relative z-10">The central systems shift</h2>
+            <div class="grid md:grid-cols-2 gap-16 relative z-10">
+                <div>
+                    <h3 class="text-brand-mint/50 uppercase text-[10px] font-black tracking-[0.3em] mb-8">Before: Status Quo</h3>
+                    <p class="text-2xl font-bold mb-6 text-white">Fragmented and reactive</p>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-brand-urgent opacity-50 shrink-0"></i>
+                            <span class="text-slate-400 leading-snug">Reports move through multiple institutional pathways without centralization</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-brand-urgent opacity-50 shrink-0"></i>
+                            <span class="text-slate-400 leading-snug">Oversight often occurs long after harm has already manifested</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-brand-urgent opacity-50 shrink-0"></i>
+                            <span class="text-slate-400 leading-snug">Data access depends on manual requests and agency-to-agency cooperation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-brand-mint uppercase text-[10px] font-black tracking-[0.3em] mb-8">After: SB 237 Framework</h3>
+                    <p class="text-2xl font-bold mb-6 text-brand-mint">Centralized and accelerated</p>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-mint shrink-0"></i>
+                            <span class="text-slate-100 font-medium leading-snug">More reports routed through unified DCFS and LDOE tracking systems</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-mint shrink-0"></i>
+                            <span class="text-slate-100 font-medium leading-snug">Codified "immediate" investigation timelines for high-risk reports</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-mint shrink-0"></i>
+                            <span class="text-slate-100 font-medium leading-snug">Expanded ombudsman access and fatality review infrastructure</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-10 border-t border-white/10 relative z-10">
+                <div class="max-w-3xl">
+                    <p class="text-xl italic text-slate-300 font-light leading-relaxed">
+                        <span class="text-brand-mint text-4xl font-serif leading-none align-bottom mr-1">"</span>
+                        The question is not whether Louisiana should protect children faster. Of course it should. The question is whether the state is building the capacity to do that well, or just writing urgency into law and hoping the workforce survives it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Impacts Cards -->
+        <section>
+            <h2 class="text-3xl font-black text-brand-dark mb-10 tracking-tight">Primary Policy Impacts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm impact-card impact-med">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-black text-brand-dark leading-tight">Stronger Child Safety Intent</h3>
+                        <span class="text-[10px] font-black text-brand-dark bg-brand-mint/20 px-2.5 py-1 rounded uppercase tracking-tighter">Med Risk</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">The bill responds to real failures in child protection by requiring clearer reporting, faster escalation, and more structured fatality review.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm impact-card impact-high">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-black text-brand-dark leading-tight text-brand-urgent">Workforce Strain</h3>
+                        <span class="text-[10px] font-black text-white bg-brand-urgent px-2.5 py-1 rounded uppercase tracking-tighter">High Risk</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">The fiscal note estimates 688 new DCFS positions, signaling that the bill cannot be implemented safely without major staffing growth.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm impact-card impact-med">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-black text-brand-dark leading-tight">Data Governance Risk</h3>
+                        <span class="text-[10px] font-black text-brand-dark bg-brand-mint/20 px-2.5 py-1 rounded uppercase tracking-tighter">Med Risk</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Expanded remote access to DCFS systems must be read-only, role-based, logged, and limited to legally authorized purposes.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm impact-card impact-high">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-black text-brand-dark leading-tight text-brand-urgent">Family Surveillance</h3>
+                        <span class="text-[10px] font-black text-white bg-brand-urgent px-2.5 py-1 rounded uppercase tracking-tighter">High Risk</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Without poverty safeguards, expanded investigations may fall hardest on low-income families overexposed to surveillance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exposure Section -->
+        <section class="bg-white rounded-[2.5rem] border border-slate-100 shadow-2xl p-8 lg:p-16">
+            <h2 class="text-3xl font-black mb-12 text-center text-brand-dark tracking-tight">Where implementation could break</h2>
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h3 class="font-black text-brand-charcoal mb-8 flex items-center gap-3 text-lg">
+                        <div class="p-2 bg-brand-urgent/10 rounded-lg">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-brand-urgent"></i>
+                        </div>
+                        Primary pressure points
+                    </h3>
+                    <ul class="space-y-5 mb-10">
+                        <li class="flex gap-4 text-sm text-slate-700 items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-mint shrink-0"></i>
+                            <span>$89.8M first-year DCFS implementation cost</span>
+                        </li>
+                        <li class="flex gap-4 text-sm text-slate-700 items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-mint shrink-0"></i>
+                            <span>688 projected new DCFS positions required</span>
+                        </li>
+                        <li class="flex gap-4 text-sm text-slate-700 items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-mint shrink-0"></i>
+                            <span>Immediate investigation mandates for high-risk cases</span>
+                        </li>
+                        <li class="flex gap-4 text-sm text-slate-700 items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-mint shrink-0"></i>
+                            <span>New LDOE database for school employee allegations</span>
+                        </li>
+                        <li class="flex gap-4 text-sm text-slate-700 items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-mint shrink-0"></i>
+                            <span>Unprecedented remote access to confidential systems</span>
+                        </li>
+                    </ul>
+
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-3">
+                                <span>Projected Fiscal scale</span>
+                                <span class="text-brand-dark">$415.7M (5-yr)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                                <div class="bg-brand-dark h-full w-[85%] rounded-full shadow-inner"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-3">
+                                <span>Human Capital scale</span>
+                                <span class="text-brand-dark">688 positions</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                                <div class="bg-brand-dark h-full w-[75%] rounded-full shadow-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-[2rem] border border-slate-100 flex flex-col justify-center relative">
+                    <div class="absolute top-0 right-0 p-6 opacity-10">
+                        <i data-lucide="scale" class="w-24 h-24 text-brand-dark"></i>
+                    </div>
+                    <h3 class="font-black text-brand-dark mb-6 uppercase text-xs tracking-[0.3em]">Analysis Perspective</h3>
+                    <p class="text-slate-600 leading-relaxed mb-8 text-lg font-medium">
+                        SB 237 has the bones of a serious child protection reform package, but bones are not a body. Without staffing, technology, and family preservation funding, the bill risks creating a faster pipeline into a failing system.
+                    </p>
+                    <div class="bg-brand-dark p-6 rounded-xl shadow-lg">
+                        <p class="text-sm font-bold text-white italic leading-relaxed">
+                            "Support should be conditioned on safeguards. Children need protection, not a paperwork avalanche with a badge."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Banner -->
+        <section class="bg-brand-dark text-white rounded-[2rem] p-10 lg:p-16 shadow-2xl relative group overflow-hidden">
+            <div class="absolute inset-0 bg-brand-charcoal opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+            <div class="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                <div class="bg-brand-mint/20 p-6 rounded-3xl border border-brand-mint/30">
+                    <i data-lucide="shield-check" class="w-12 h-12 text-brand-mint"></i>
+                </div>
+                <div>
+                    <span class="text-brand-mint uppercase text-[10px] font-black tracking-[0.4em] mb-3 block">Final Summary</span>
+                    <p class="text-2xl font-bold leading-tight mb-4">
+                        SB 237 is a high-stakes reform that requires rigorous guardrails.
+                    </p>
+                    <p class="text-slate-200 text-lg font-light leading-relaxed">
+                        While the goals are defensible, the state must ensure urgency does not become overload, transparency does not become privacy exposure, and child protection does not become expanded surveillance of poor families.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between gap-20 mb-20">
+                <div class="lg:w-1/2">
+                    <img src="https://tia-fields.github.io/la-sb441-early-childhood-oversight-analysis/IIL-Logo-Secondary-FullColor.svg" alt="Invest in Louisiana" class="h-14 mb-8">
+                    <p class="text-sm text-slate-500 leading-relaxed mb-8 max-w-xl font-medium">
+                        This dashboard provides a policy and systems analysis of SB 237 based on official bill text, committee amendments, and the Legislative Fiscal Office fiscal notes available at the time of publication. 
+                    </p>
+                    <div class="flex items-start gap-5 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <i data-lucide="info" class="w-6 h-6 text-brand-mint mt-1 shrink-0"></i>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">
+                            <span class="font-black uppercase tracking-widest block mb-2 text-brand-dark text-[10px]">Methodology Note</span>
+                            Figures drawn directly from legislative materials should be treated as official estimates. Interpretive findings and implementation risks are analytical judgments based on child welfare system dynamics and fiscal note assumptions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h4 class="text-[10px] font-black uppercase text-slate-400 tracking-[0.3em] mb-8">Primary Evidence Base</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-xl border border-slate-100 hover:border-brand-mint/50 transition-colors bg-slate-50/50">
+                            <p class="font-black text-brand-dark text-xs mb-2 uppercase tracking-tight">SB 237 Bill Text</p>
+                            <p class="text-[11px] text-slate-500 leading-relaxed">Original and amended legislation covering reporting, investigations, and ombudsman system access.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-100 hover:border-brand-mint/50 transition-colors bg-slate-50/50">
+                            <p class="font-black text-brand-dark text-xs mb-2 uppercase tracking-tight">Fiscal Note (LFO)</p>
+                            <p class="text-[11px] text-slate-500 leading-relaxed">Official estimate of $415M+ in 5-year costs and requirement for 688 new DCFS positions.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-100 hover:border-brand-mint/50 transition-colors bg-slate-50/50">
+                            <p class="font-black text-brand-dark text-xs mb-2 uppercase tracking-tight">Health & Welfare Amds</p>
+                            <p class="text-[11px] text-slate-500 leading-relaxed">Added provisions for fatality transparency and false reporting penalties.</p>
+                        </div>
+                        <div class="p-5 rounded-xl border border-slate-100 hover:border-brand-mint/50 transition-colors bg-slate-50/50">
+                            <p class="font-black text-brand-dark text-xs mb-2 uppercase tracking-tight">Systems Analysis</p>
+                            <p class="text-[11px] text-slate-500 leading-relaxed">Analysis of workforce bottlenecks, data privacy, and family surveillance implications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-100 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-slate-400 font-black tracking-[0.3em]">&copy; 2026 INVEST IN LOUISIANA. PUBLICATION-READY V1.2</p>
+                <div class="flex gap-8">
+                    <a href="#" class="text-[10px] font-black text-slate-400 hover:text-brand-dark transition-colors uppercase tracking-[0.2em]">Policy Frameworks</a>
+                    <a href="#" class="text-[10px] font-black text-slate-400 hover:text-brand-dark transition-colors uppercase tracking-[0.2em]">Data Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
